@@ -42,9 +42,6 @@
                                 <i class="ri-fullscreen-line"></i>
                             </button>
                         </div>
-
-                       
-
                         <div class="dropdown d-inline-block user-dropdown">
                             <button type="button" class="btn header-item waves-effect" id="page-header-user-dropdown"
                                 data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">

@@ -19,6 +19,7 @@ Route::get('/', function () {
     return view('welcome');
 });
 
+// Controller for all admin route methods
 Route::controller(AdminController::class)->group( function() {
     Route::get('/admin/logout', 'destroy')->name('admin.logout');
 });

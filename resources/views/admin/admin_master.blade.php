@@ -61,7 +61,7 @@
         <!-- END layout-wrapper -->
 
         <!-- Right Sidebar -->
-        <div class="right-bar">
+        <!-- <div class="right-bar">
             <div data-simplebar class="h-100">
                 <div class="rightbar-title d-flex align-items-center px-3 py-4">
             
@@ -70,10 +70,10 @@
                     <a href="javascript:void(0);" class="right-bar-toggle ms-auto">
                         <i class="mdi mdi-close noti-icon"></i>
                     </a>
-                </div>
+                </div> -->
 
                 <!-- Settings -->
-                <hr class="mt-0" />
+                <!-- <hr class="mt-0" />
                 <h6 class="text-center mb-0">Choose Layouts</h6>
 
                 <div class="p-4">
@@ -103,10 +103,10 @@
                     </div>
 
             
-                </div>
+                </div> -->
 
-            </div> <!-- end slimscroll-menu-->
-        </div>
+            <!-- </div> end slimscroll-menu -->
+        <!-- </div> -->
         <!-- /Right-bar -->
 
         <!-- Right bar overlay-->

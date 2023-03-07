@@ -51,7 +51,7 @@
                                 <!-- Username -->
                             <div class="form-group mb-3 row">
                                 <div class="col-12">
-                                    <input class="form-control" type="text" required="" placeholder="Username">
+                                    <input class="form-control" id="username" name="username" type="text" required="" placeholder="Username">
                                 </div>
                             </div>
                                 <!-- Email -->

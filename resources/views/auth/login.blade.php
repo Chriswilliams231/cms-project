@@ -45,7 +45,7 @@
                                         <!-- Email -->
                                 <div class="form-group mb-3 row">
                                     <div class="col-12">
-                                        <input class="form-control"id="email" type="email" name="email" required="" placeholder="Email">
+                                        <input class="form-control"id="username" type="text" name="username" required="" placeholder="Username">
                                     </div>
                                 </div>
                                         <!-- Password -->

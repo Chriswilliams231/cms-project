@@ -16,8 +16,12 @@ class AdminController extends Controller
         $request->session()->invalidate();
 
         $request->session()->regenerateToken();
+        $notification = [
+            'message' => 'User is Signed Out',
+            'alert-type' => 'warning'
+        ];
 
-        return redirect('/login');
+        return redirect('/login')->with($notification);
     }
         // Profile Method
     public function profile() {
@@ -51,6 +55,11 @@ class AdminController extends Controller
 
         $data->save();
 
-        return redirect()->route('admin.profile');
+        $notification = [
+            'message' => 'Admin Profile Updated',
+            'alert-type' => 'success'
+        ];
+
+        return redirect()->route('admin.profile')->with($notification);
     }
 }

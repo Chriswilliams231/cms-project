@@ -58,7 +58,7 @@
 </div>
 
 <script type="text/javascript">
-
+    // This helps to display a image you select for your profile
     $(document).ready(function(){
         $('#image').change(function(event){
             var reader = new FileReader();

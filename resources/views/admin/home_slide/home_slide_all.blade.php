@@ -10,10 +10,10 @@
                     <center>
                     <h4 class="card-title">Home Slide Edit Page</h4>
                     </center>
-                    <form method="post" action="{{route('store.profile')}}" enctype="multipart/form-data">
+                    <form method="post" action="{{route('update.slider')}}" enctype="multipart/form-data">
 
                         @csrf
-
+                        <input type="hidden" name="id" value="{{$homeslide->id}}">
                     <div class="row mb-3">
                         <label for="example-text-input" class="col-sm-2 col-form-label">Title</label>
                         <div class="col-sm-10">

@@ -24,21 +24,21 @@
                     <div class="row mb-3">
                         <label for="example-text-input" class="col-sm-2 col-form-label">Short Title</label>
                         <div class="col-sm-10">
-                            <input class="form-control" name="short_title" type="text" value="{{$homeslide->short_title}}" id="name">
+                            <input class="form-control" name="short_title" type="text" value="{{$homeslide->short_title}}" id="short_title">
                         </div>
                     </div>
                     <!-- end row -->
                     <div class="row mb-3">
                         <label for="example-text-input" class="col-sm-2 col-form-label">Video Url</label>
                         <div class="col-sm-10">
-                            <input class="form-control" name="video_url" type="email" value="{{$homeslide->video_url}}" id="name">
+                            <input class="form-control" name="video_url" type="email" value="{{$homeslide->video_url}}" id="video_url">
                         </div>
                     </div>
                     <!-- end row -->
                     <div class="row mb-3">
                         <label for="example-text-input" class="col-sm-2 col-form-label">Slider Image</label>
                         <div class="col-sm-10">
-                            <input class="form-control" name="home_images" type="file"  id="image">
+                            <input class="form-control" name="home_images" type="file"  id="home_images">
                         </div>
                     </div>
                     <!-- end row -->

@@ -5,6 +5,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\AdminController;
 use App\Http\Controllers\Home\HomeSliderController;
+use App\Http\Controllers\Home\AboutController;
 
 /*
 |--------------------------------------------------------------------------
@@ -33,11 +34,16 @@ Route::controller(AdminController::class)->group(function () {
     Route::post("/update/password", "updatePassword")->name("update.password");
 });
 
-// Controller for Home Slide Routes
+// Controller for Home Slide Setup Routes
 Route::controller(HomeSliderController::class)->group(function () {
     Route::get("/home/slide", "homeSlider")->name("home.slide");
 
     Route::post("/update/slide", "updateSlider")->name("update.slider");
+});
+
+// Controller For the About Page Setup Routes
+Route::controller(AboutController::class)->group(function () {
+    Route::get("/about/page", "aboutPage")->name("about.page");
 });
 
 Route::get("/dashboard", function () {

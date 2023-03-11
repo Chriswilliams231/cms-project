@@ -17,37 +17,45 @@ use App\Http\Controllers\Home\HomeSliderController;
 |
 */
 
-Route::get('/', function () {
-    return view('frontend.index');
+Route::get("/", function () {
+    return view("frontend.index");
 });
 
 // Controller for all admin route methods
-Route::controller(AdminController::class)->group( function() {
-    Route::get('/admin/logout', 'destroy')->name('admin.logout');
-    Route::get('/admin/profile', 'profile')->name('admin.profile');
-    Route::get('/edit/profile', 'edit')->name('edit.profile');
-    
-    Route::post('/store/profile', 'storeProfile')->name('store.profile');
-   
-    Route::get('/change/password', 'changePassword')->name('change.password');
-    Route::post('/update/password', 'updatePassword')->name('update.password');
+Route::controller(AdminController::class)->group(function () {
+    Route::get("/admin/logout", "destroy")->name("admin.logout");
+    Route::get("/admin/profile", "profile")->name("admin.profile");
+    Route::get("/edit/profile", "edit")->name("edit.profile");
+
+    Route::post("/store/profile", "storeProfile")->name("store.profile");
+
+    Route::get("/change/password", "changePassword")->name("change.password");
+    Route::post("/update/password", "updatePassword")->name("update.password");
 });
 
 // Controller for Home Slide Routes
-Route::controller(HomeSliderController::class)->group(function(){
-    Route::get('/home/slide','homeSlider')->name('home.slide');
-   
-    Route::post('/update/slide','updateSlider')->name('update.slider');
+Route::controller(HomeSliderController::class)->group(function () {
+    Route::get("/home/slide", "homeSlider")->name("home.slide");
+
+    Route::post("/update/slide", "updateSlider")->name("update.slider");
 });
 
-Route::get('/dashboard', function () {
-    return view('admin.index');
-})->middleware(['auth', 'verified'])->name('dashboard');
+Route::get("/dashboard", function () {
+    return view("admin.index");
+})
+    ->middleware(["auth", "verified"])
+    ->name("dashboard");
 
-Route::middleware('auth')->group(function () {
-    Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
-    Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');
-    Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
+Route::middleware("auth")->group(function () {
+    Route::get("/profile", [ProfileController::class, "edit"])->name(
+        "profile.edit"
+    );
+    Route::patch("/profile", [ProfileController::class, "update"])->name(
+        "profile.update"
+    );
+    Route::delete("/profile", [ProfileController::class, "destroy"])->name(
+        "profile.destroy"
+    );
 });
 
-require __DIR__.'/auth.php';
+require __DIR__ . "/auth.php";

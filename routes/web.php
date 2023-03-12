@@ -44,8 +44,11 @@ Route::controller(HomeSliderController::class)->group(function () {
 // Controller For the About Page Setup Routes
 Route::controller(AboutController::class)->group(function () {
     Route::get("/about/page", "aboutPage")->name("about.page");
+
+    Route::post("/update/about", "updateAbout")->name("update.about");
 });
 
+// Dashboard Route
 Route::get("/dashboard", function () {
     return view("admin.index");
 })

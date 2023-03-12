@@ -11,7 +11,7 @@
                     <center>
                     <h4 class="card-title">About Page Edit Page</h4>
                     </center>
-                    <form method="post" action="{{route('update.slider')}}" enctype="multipart/form-data">
+                    <form method="post" action="{{route('update.about')}}" enctype="multipart/form-data">
 
                         @csrf
                         <input type="hidden" name="id" value="{{$aboutpage->id}}">
@@ -39,7 +39,7 @@
                     <div class="row mb-3">
                         <label for="example-text-input" class="col-sm-2 col-form-label">Long Description</label>
                         <div class="col-sm-10">
-                            <input class="form-control" name="long_description" type="text" value="{{$aboutpage->long_description}}" id="long_description">
+                        <textarea id="elm1" name="long_description">{{$aboutpage->long_description}} </textarea>
                         </div>
                     </div>
                     <!-- end row -->
@@ -53,11 +53,11 @@
                     <div class="row mb-3">
                         <label for="example-text-input" class="col-sm-2 col-form-label"></label>
                         <div class="col-sm-10">
-                        <img id="showImage" class="rounded avatar-lg" src="{{ (!empty($aboutpage->home_images))? url($homeslide->home_images):url('upload/no_image.jpg') }}" alt="Card image cap">
+                        <img id="showImage" class="rounded avatar-lg" src="{{ (!empty($aboutpage->about_image))? url($homeslide->about_image):url('upload/no_image.jpg') }}" alt="Card image cap">
                         </div>
                     </div>
                     <!-- end row -->
-                    <input type="submit" class="btn btn-info waves-effect waves-light" value="Update Slide">
+                    <input type="submit" class="btn btn-info waves-effect waves-light" value="Update About Page">
                     </form>
                 </div>
             </div>

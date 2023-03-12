@@ -64,4 +64,10 @@ class AboutController extends Controller
                 ->with($notification);
         }
     }
+    // Route Method to the About Page in the fronted
+    public function homeAbout()
+    {
+        $aboutpage = About::find(1);
+        return view("frontend.about_page", compact("aboutpage"));
+    }
 }

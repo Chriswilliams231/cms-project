@@ -70,4 +70,10 @@ class AboutController extends Controller
         $aboutpage = About::find(1);
         return view("frontend.about_page", compact("aboutpage"));
     }
+
+    // Route Method for the multi image
+    public function multiImage()
+    {
+        return view("admin.about_page.multimage");
+    }
 }

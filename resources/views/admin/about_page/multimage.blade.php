@@ -9,7 +9,7 @@
             <div class="card">
                 <div class="card-body">
                     <center>
-                    <h4 class="card-title">Add Multi Image</h4>
+                    <h4 class="card-title">Add Multi Image</h4><br><br>
                     </center>
                     <form method="post" action="{{route('update.about')}}" enctype="multipart/form-data">
                         @csrf

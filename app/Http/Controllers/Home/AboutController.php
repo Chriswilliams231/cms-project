@@ -110,4 +110,14 @@ class AboutController extends Controller
             ->back()
             ->with($notification);
     }
+
+    public function AllMultiImage()
+    {
+        $allMultiImage = MultiImage::all();
+
+        return view(
+            "admin.about_page.all_multiimage",
+            compact("allMultiImage")
+        );
+    }
 }

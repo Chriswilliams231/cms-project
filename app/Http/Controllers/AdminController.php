@@ -41,7 +41,7 @@ class AdminController extends Controller
     }
 
     // Edit Profile Method that allows you to update a profile image
-    public function storeProfile(Request $request): RedirectResponse
+    public function StoreProfile(Request $request): RedirectResponse
     {
         $id = Auth::user()->id;
         $data = User::find($id);
@@ -71,13 +71,13 @@ class AdminController extends Controller
     }
 
     // Method View to update User Password
-    public function changePassword()
+    public function ChangePassword()
     {
         return view("admin.admin_change_password");
     }
 
     // Post Method to update user password
-    public function updatePassword(Request $request)
+    public function UpdatePassword(Request $request)
     {
         $validateData = $request->validate([
             "oldpassword" => "required",

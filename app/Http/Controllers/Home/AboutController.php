@@ -11,13 +11,13 @@ use Intervention\Image\Facades\Image;
 
 class AboutController extends Controller
 {
-    public function aboutPage()
+    public function AboutPage()
     {
         $aboutpage = About::find(1);
         return view("admin.about_page.about_page_all", compact("aboutpage"));
     }
 
-    public function updateAbout(Request $request): RedirectResponse
+    public function UpdateAbout(Request $request): RedirectResponse
     {
         $about_id = $request->id;
 
@@ -65,14 +65,14 @@ class AboutController extends Controller
         }
     }
     // Route Method to the About Page in the fronted
-    public function homeAbout()
+    public function HomeAbout()
     {
         $aboutpage = About::find(1);
         return view("frontend.about_page", compact("aboutpage"));
     }
 
     // Route Method for the multi image
-    public function multiImage()
+    public function MultiImage()
     {
         return view("admin.about_page.multimage");
     }

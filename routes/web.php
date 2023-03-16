@@ -28,27 +28,27 @@ Route::controller(AdminController::class)->group(function () {
     Route::get("/admin/profile", "profile")->name("admin.profile");
     Route::get("/edit/profile", "edit")->name("edit.profile");
 
-    Route::post("/store/profile", "storeProfile")->name("store.profile");
+    Route::post("/store/profile", "StoreProfile")->name("store.profile");
 
-    Route::get("/change/password", "changePassword")->name("change.password");
-    Route::post("/update/password", "updatePassword")->name("update.password");
+    Route::get("/change/password", "ChangePassword")->name("change.password");
+    Route::post("/update/password", "UpdatePassword")->name("update.password");
 });
 
 // Controller for Home Slide Setup Routes
 Route::controller(HomeSliderController::class)->group(function () {
-    Route::get("/home/slide", "homeSlider")->name("home.slide");
+    Route::get("/home/slide", "HomeSlider")->name("home.slide");
 
-    Route::post("/update/slide", "updateSlider")->name("update.slider");
+    Route::post("/update/slide", "UpdateSlider")->name("update.slider");
 });
 
 // Controller For the About Page Setup Routes
 Route::controller(AboutController::class)->group(function () {
-    Route::get("/about/page", "aboutPage")->name("about.page");
-    Route::get("/about", "homeAbout")->name("home.about");
+    Route::get("/about/page", "AboutPage")->name("about.page");
+    Route::get("/about", "HomeAbout")->name("home.about");
     // Multi Image Route
-    Route::get("/about/multi-image", "multiImage")->name("multi.image");
+    Route::get("/about/multi-image", "MultiImage")->name("multi.image");
 
-    Route::post("/update/about", "updateAbout")->name("update.about");
+    Route::post("/update/about", "UpdateAbout")->name("update.about");
 });
 
 // Dashboard Route

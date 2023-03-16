@@ -14,10 +14,11 @@ class AuthenticatedSessionController extends Controller
 {
     /**
      * Display the login view.
+     * Work on this view
      */
     public function create(): View
     {
-        return view('auth.login');
+        return view("auth.login");
     }
 
     /**
@@ -29,11 +30,13 @@ class AuthenticatedSessionController extends Controller
 
         $request->session()->regenerate();
         $notification = [
-            'message' => 'Login Successful',
-            'alert-type' => 'success'
+            "message" => "Login Successful",
+            "alert-type" => "success",
         ];
 
-        return redirect()->intended(RouteServiceProvider::HOME)->with($notification);
+        return redirect()
+            ->intended(RouteServiceProvider::HOME)
+            ->with($notification);
     }
 
     /**
@@ -41,12 +44,12 @@ class AuthenticatedSessionController extends Controller
      */
     public function destroy(Request $request): RedirectResponse
     {
-        Auth::guard('web')->logout();
+        Auth::guard("web")->logout();
 
         $request->session()->invalidate();
 
         $request->session()->regenerateToken();
 
-        return redirect('/');
+        return redirect("/");
     }
 }

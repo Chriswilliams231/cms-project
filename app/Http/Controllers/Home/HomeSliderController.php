@@ -10,14 +10,14 @@ use Intervention\Image\Facades\Image;
 
 class HomeSliderController extends Controller
 {
-    public function homeSlider()
+    public function HomeSlider()
     {
         $homeslide = HomeSlide::find(1);
         return view("admin.home_slide.home_slide_all", compact("homeslide"));
     }
 
     // Method to Update the User Home Slide
-    public function updateSlider(Request $request): RedirectResponse
+    public function UpdateSlider(Request $request): RedirectResponse
     {
         $slide_id = $request->id;
 

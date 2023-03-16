@@ -107,10 +107,11 @@ class AboutController extends Controller
             "alert-type" => "success",
         ];
         return redirect()
-            ->back()
+            ->route("all.multi.image")
             ->with($notification);
     }
 
+    // Route Method to View all the images in the multi_image table
     public function AllMultiImage()
     {
         $allMultiImage = MultiImage::all();
@@ -119,5 +120,44 @@ class AboutController extends Controller
             "admin.about_page.all_multiimage",
             compact("allMultiImage")
         );
+    }
+
+    // Route To the edit page for the images
+    public function EditMultiImage($id)
+    {
+        $multiImage = MultiImage::findOrFail($id);
+        return view("admin.about_page.edit_multi_image", compact("multiImage"));
+    }
+
+    // POST Method to update the  multiple images stored
+    public function UpdateImages(Request $request)
+    {
+        $images_id = $request->id;
+
+        if ($request->file("multi_image")) {
+            $image = $request->file("multi_image");
+            $name_gen =
+                hexdec(uniqid()) . "." . $image->getClientOriginalExtension();
+
+            Image::make($image)
+                ->resize(220, 220)
+                ->save("upload/multi_images/" . $name_gen);
+
+            $save_url = "upload/multi_images/" . $name_gen;
+
+            MultiImage::findOrFail($images_id)->update([
+                "multi_image" => $save_url,
+                "updated_at" => Carbon::now(),
+            ]);
+
+            $notification = [
+                "message" => " Image Updated Successfully",
+                "alert-type" => "success",
+            ];
+
+            return redirect()
+                ->route("all.multi.image")
+                ->with($notification);
+        }
     }
 }

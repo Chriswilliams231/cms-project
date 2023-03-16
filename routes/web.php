@@ -48,7 +48,8 @@ Route::controller(AboutController::class)->group(function () {
     // Multi Image Route
     Route::get("/about/multi-image", "MultiImage")->name("multi.image");
 
-    Route::post("/update/about", "UpdateAbout")->name("update.about");
+    Route::post("/about/update", "UpdateAbout")->name("update.about");
+    Route::post("/store/multi-image", "StoreImages")->name("store.multi.image");
 });
 
 // Dashboard Route

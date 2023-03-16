@@ -7,6 +7,8 @@ use Illuminate\Http\RedirectResponse;
 
 use App\Http\Controllers\Controller;
 use App\Models\About;
+use App\Models\MultiImage;
+use Illuminate\Support\Carbon;
 use Intervention\Image\Facades\Image;
 
 class AboutController extends Controller
@@ -75,5 +77,37 @@ class AboutController extends Controller
     public function MultiImage()
     {
         return view("admin.about_page.multimage");
+    }
+
+    // Route Method to Store multiple images
+    public function StoreImages(Request $request)
+    {
+        $image = $request->file("multi_image");
+
+        foreach ((array) $image as $multi_image) {
+            $name_gen =
+                hexdec(uniqid()) .
+                "." .
+                $multi_image->getClientOriginalExtension();
+
+            Image::make($multi_image)
+                ->resize(220, 220)
+                ->save("upload/multi_images/" . $name_gen);
+
+            $save_url = "upload/multi_images/" . $name_gen;
+
+            MultiImage::insert([
+                "multi_image" => $save_url,
+                "created_at" => Carbon::now(),
+            ]);
+        }
+
+        $notification = [
+            "message" => "Multi Image Inserted Successfully",
+            "alert-type" => "success",
+        ];
+        return redirect()
+            ->back()
+            ->with($notification);
     }
 }

@@ -80,7 +80,7 @@ class AboutController extends Controller
     }
 
     // Route Method to Store multiple images
-    public function StoreImages(Request $request)
+    public function StoreImages(Request $request): RedirectResponse
     {
         $image = $request->file("multi_image");
 
@@ -130,7 +130,7 @@ class AboutController extends Controller
     }
 
     // POST Method to update the  multiple images stored
-    public function UpdateImages(Request $request)
+    public function UpdateImages(Request $request): RedirectResponse
     {
         $images_id = $request->id;
 
@@ -159,5 +159,23 @@ class AboutController extends Controller
                 ->route("all.multi.image")
                 ->with($notification);
         }
+    }
+
+    public function DeleteMultiImage($id): RedirectResponse
+    {
+        $multi = MultiImage::findOrFail($id);
+        $image = $multi->multi_image;
+        unlink($image);
+
+        MultiImage::findOrFail($id)->delete();
+
+        $notification = [
+            "message" => " Image Deleted Successfully",
+            "alert-type" => "success",
+        ];
+
+        return redirect()
+            ->back()
+            ->with($notification);
     }
 }

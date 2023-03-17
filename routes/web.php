@@ -51,6 +51,9 @@ Route::controller(AboutController::class)->group(function () {
     Route::get("/edit/multi-image/{id}", "EditMultiImage")->name(
         "edit.multi.image"
     );
+    Route::get("/delete/multi-image/{id}", "DeleteMultiImage")->name(
+        "delete.multi.image"
+    );
 
     Route::post("/about/update", "UpdateAbout")->name("update.about");
     Route::post("/store/multi-image", "StoreImages")->name("store.multi.image");

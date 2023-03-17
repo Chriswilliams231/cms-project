@@ -178,6 +178,10 @@
 
     <!-- Datatable init js -->
     <script src="{{asset('assets/js/pages/datatables.init.js')}}"></script>
+
+    <!-- Sweetalert -->      
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
+    <script src="{{ asset('assets/js/code.js') }}"></script>
     </body>
 
 </html>

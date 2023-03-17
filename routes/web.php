@@ -6,6 +6,7 @@ use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\AdminController;
 use App\Http\Controllers\Home\HomeSliderController;
 use App\Http\Controllers\Home\AboutController;
+use App\Http\Controllers\Home\PortfolioController;
 
 /*
 |--------------------------------------------------------------------------
@@ -60,6 +61,11 @@ Route::controller(AboutController::class)->group(function () {
     Route::post("/update/multi-image", "UpdateImages")->name(
         "update.multi.image"
     );
+});
+
+// Route for all Portfolio Methods
+Route::controller(PortfolioController::class)->group(function () {
+    Route::get("/portfolio/all", "PortfolioPage")->name("portfolio.page");
 });
 
 // Dashboard Route

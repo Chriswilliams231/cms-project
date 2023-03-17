@@ -4,8 +4,10 @@ namespace App\Http\Controllers\Home;
 
 use App\Http\Controllers\Controller;
 use App\Models\Portfolio;
+
 use Intervention\Image\Facades\Image;
 use Illuminate\Http\Request;
+use Illuminate\Http\RedirectResponse;
 
 class PortfolioController extends Controller
 {
@@ -23,7 +25,42 @@ class PortfolioController extends Controller
     }
 
     // Route Method to store portfolio data
-    public function StorePortfolio()
+    public function StorePortfolio(Request $request): RedirectResponse
     {
+        $request->validate(
+            [
+                "portfolio_name" => "required",
+                "portfolio_title" => "required",
+                "portfolio_image" => "required",
+            ],
+            [
+                "portfolio_name.required" => " Portfolio Name is Required",
+                "portfolio_title.required" => " Portfolio Title is Required",
+            ]
+        );
+        $image = $request->file("portfolio_image");
+        $name_gen =
+            hexdec(uniqid()) . "." . $image->getClientOriginalExtension();
+
+        Image::make($image)
+            ->resize(1020, 519)
+            ->save("upload/portfolio/" . $name_gen);
+        $save_url = "upload/portfolio/" . $name_gen;
+
+        Portfolio::insert([
+            "portfolio_name" => $request->portfolio_name,
+            "portfolio_title" => $request->portfolio_title,
+            "portfolio_description" => $request->description,
+            "portfolio_image" => $save_url,
+        ]);
+
+        $notification = [
+            "message" => "Portfolio Data Inserted Successfully",
+            "alert-type" => "success",
+        ];
+
+        return redirect()
+            ->back()
+            ->with($notification);
     }
 }

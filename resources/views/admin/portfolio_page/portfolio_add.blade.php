@@ -19,6 +19,9 @@
                         <label for="example-text-input" class="col-sm-2 col-form-label">Portfolio Name</label>
                         <div class="col-sm-10">
                             <input class="form-control" name="portfolio_name" type="text"  id="name">
+                            @error('portfolio_name')
+                                <span class="text-danger">{{$message}}</span>
+                            @enderror
                         </div>
                     </div>
                     <!-- end row -->
@@ -26,6 +29,9 @@
                         <label for="example-text-input" class="col-sm-2 col-form-label">Portfolio Title</label>
                         <div class="col-sm-10">
                             <input class="form-control" name="portfolio_title" type="text"  id="short_title">
+                            @error('portfolio_title')
+                                <span class="text-danger">{{$message}}</span>
+                            @enderror
                         </div>
                     </div>
                     <!-- end row -->

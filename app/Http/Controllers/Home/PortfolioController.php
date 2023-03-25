@@ -76,6 +76,7 @@ class PortfolioController extends Controller
         );
     }
 
+    // Route Method for updating the portfolio data
     public function UpdatePortfolio(Request $request): RedirectResponse
     {
         $portfolio_id = $request->id;
@@ -119,5 +120,24 @@ class PortfolioController extends Controller
                 ->route("portfolio.page")
                 ->with($notification);
         }
+    }
+
+    // Route Method to Delete
+    public function DeletePortfolio($id)
+    {
+        $portfolio = Portfolio::findOrFail($id);
+        $img = $portfolio->portfolio_image;
+        unlink($img);
+
+        Portfolio::findOrFail($id)->delete();
+
+        $notification = [
+            "message" => "Portfolio Image Deleted Successfully",
+            "alert-type" => "success",
+        ];
+
+        return redirect()
+            ->back()
+            ->with($notification);
     }
 }

@@ -65,4 +65,59 @@ class PortfolioController extends Controller
             ->route("portfolio.page")
             ->with($notification);
     }
+
+    // Route Method to the Edit Page
+    public function EditPortfolio($id)
+    {
+        $portfolio = Portfolio::findOrFail($id);
+        return view(
+            "admin.portfolio_page.portfolio_edit",
+            compact("portfolio")
+        );
+    }
+
+    public function UpdatePortfolio(Request $request): RedirectResponse
+    {
+        $portfolio_id = $request->id;
+
+        if ($request->file("portfolio_image")) {
+            $image = $request->file("portfolio_image");
+            $name_gen =
+                hexdec(uniqid()) . "." . $image->getClientOriginalExtension(); // 3434343443.jpg
+
+            Image::make($image)
+                ->resize(1020, 519)
+                ->save("upload/portfolio/" . $name_gen);
+            $save_url = "upload/portfolio/" . $name_gen;
+
+            Portfolio::findOrFail($portfolio_id)->update([
+                "portfolio_name" => $request->portfolio_name,
+                "portfolio_title" => $request->portfolio_title,
+                "portfolio_description" => $request->portfolio_description,
+                "portfolio_image" => $save_url,
+            ]);
+            $notification = [
+                "message" => "Portfolio Updated with Image Successfully",
+                "alert-type" => "success",
+            ];
+
+            return redirect()
+                ->route("all.portfolio")
+                ->with($notification);
+        } else {
+            Portfolio::findOrFail($portfolio_id)->update([
+                "portfolio_name" => $request->portfolio_name,
+                "portfolio_title" => $request->portfolio_title,
+                "portfolio_description" => $request->portfolio_description,
+            ]);
+            $notification = [
+                "message" => "Portfolio Updated without Image Successfully",
+                "alert-type" => "success",
+            ];
+
+            return redirect()
+                ->route("portfolio.page")
+                ->with($notification);
+        }
+    }
 }

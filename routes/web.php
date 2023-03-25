@@ -67,8 +67,12 @@ Route::controller(AboutController::class)->group(function () {
 Route::controller(PortfolioController::class)->group(function () {
     Route::get("/portfolio/all", "PortfolioPage")->name("portfolio.page");
     Route::get("/portfolio/add", "AddPortfolio")->name("add.portfolio");
+    Route::get("/portfolio/edit/{id}", "EditPortfolio")->name("edit.portfolio");
 
     Route::post("/portfolio/store", "StorePortfolio")->name("store.portfolio");
+    Route::post("/portfolio/update", "UpdatePortfolio")->name(
+        "update.portfolio"
+    );
 });
 
 // Dashboard Route

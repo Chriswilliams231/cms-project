@@ -8,6 +8,7 @@ use App\Models\Portfolio;
 use Intervention\Image\Facades\Image;
 use Illuminate\Http\Request;
 use Illuminate\Http\RedirectResponse;
+use Illuminate\Support\Carbon;
 
 class PortfolioController extends Controller
 {
@@ -50,8 +51,9 @@ class PortfolioController extends Controller
         Portfolio::insert([
             "portfolio_name" => $request->portfolio_name,
             "portfolio_title" => $request->portfolio_title,
-            "portfolio_description" => $request->description,
+            "portfolio_description" => $request->portfolio_description,
             "portfolio_image" => $save_url,
+            "created_at" => Carbon::now(),
         ]);
 
         $notification = [
@@ -60,7 +62,7 @@ class PortfolioController extends Controller
         ];
 
         return redirect()
-            ->back()
+            ->route("portfolio.page")
             ->with($notification);
     }
 }

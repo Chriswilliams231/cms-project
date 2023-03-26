@@ -9,17 +9,20 @@ use Illuminate\Support\Carbon;
 
 class BlogCategoryController extends Controller
 {
+    // Route Method that list all blog Category Name
     public function BlogCategoryAll()
     {
         $blog = BlogCategory::latest()->get();
         return view("admin.blog_category.blog_category_all", compact("blog"));
     }
 
+    // Route Method to the Add a Category Name
     public function AddBlogCategory()
     {
         return view("admin.blog_category.blog_category_add");
     }
 
+    // Route Method that will store the blog data to the blog_categories table
     public function StoreBlogCategory(Request $request)
     {
         $request->validate(

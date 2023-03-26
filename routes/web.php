@@ -8,6 +8,7 @@ use App\Http\Controllers\Home\HomeSliderController;
 use App\Http\Controllers\Home\AboutController;
 use App\Http\Controllers\Home\PortfolioController;
 use App\Http\Controllers\Home\BlogCategoryController;
+use App\Http\Controllers\Home\BlogController;
 
 /*
 |--------------------------------------------------------------------------
@@ -107,6 +108,11 @@ Route::controller(BlogCategoryController::class)->group(function () {
     Route::post("/blog/category/update/{id}", "UpdateBlogCategory")->name(
         "update.blog.category"
     );
+});
+
+// Controller for Blog Routes
+Route::controller(BlogController::class)->group(function () {
+    Route::get("/blogs/all", "AllBlog")->name("all.blog");
 });
 
 // Dashboard Route

@@ -9,23 +9,23 @@
             <div class="card">
                 <div class="card-body">
                     <center>
-                    <h4 class="card-title">Add Blog Category Page</h4> <br> <br>
+                    <h4 class="card-title">Edit Blog Category Page</h4> <br> <br>
                     </center>
-                    <form method="post" action="{{route('store.blog.category')}}" >
+                    <form method="post" action="{{route('update.blog.category', $blog->id)}}" >
 
                         @csrf
-                        
+
                     <div class="row mb-3">
                         <label for="example-text-input" class="col-sm-2 col-form-label">Blog Category Name</label>
                         <div class="col-sm-10">
-                            <input class="form-control" name="blog_category" type="text"  id="name">
+                            <input class="form-control" name="blog_category" value="{{ $blog->blog_category }}" type="text"  id="name">
                             @error('blog_category')
                                 <span class="text-danger">{{$message}}</span>
                             @enderror
                         </div>
                     </div>
                     <!-- end row -->
-                    <input type="submit" class="btn btn-info waves-effect waves-light" value="Insert Blog Category">
+                    <input type="submit" class="btn btn-info waves-effect waves-light" value="Update Blog Category">
                     </form>
                 </div>
             </div>
@@ -35,6 +35,5 @@
     </div>
 
 </div>
-
 
 @endsection

@@ -29,10 +29,10 @@ Route::controller(AdminController::class)->group(function () {
     Route::get("/admin/logout", "destroy")->name("admin.logout");
     Route::get("/admin/profile", "profile")->name("admin.profile");
     Route::get("/edit/profile", "edit")->name("edit.profile");
-
-    Route::post("/store/profile", "StoreProfile")->name("store.profile");
-
     Route::get("/change/password", "ChangePassword")->name("change.password");
+
+    // All POST Methods
+    Route::post("/store/profile", "StoreProfile")->name("store.profile");
     Route::post("/update/password", "UpdatePassword")->name("update.password");
 });
 
@@ -40,6 +40,7 @@ Route::controller(AdminController::class)->group(function () {
 Route::controller(HomeSliderController::class)->group(function () {
     Route::get("/home/slide", "HomeSlider")->name("home.slide");
 
+    // All POST Methods
     Route::post("/update/slide", "UpdateSlider")->name("update.slider");
 });
 
@@ -57,6 +58,7 @@ Route::controller(AboutController::class)->group(function () {
         "delete.multi.image"
     );
 
+    // All POST Methods
     Route::post("/about/update", "UpdateAbout")->name("update.about");
     Route::post("/store/multi-image", "StoreImages")->name("store.multi.image");
     Route::post("/update/multi-image", "UpdateImages")->name(
@@ -76,6 +78,7 @@ Route::controller(PortfolioController::class)->group(function () {
         "portfolio.details"
     );
 
+    // All POST Methods
     Route::post("/portfolio/store", "StorePortfolio")->name("store.portfolio");
     Route::post("/portfolio/update", "UpdatePortfolio")->name(
         "update.portfolio"
@@ -84,15 +87,25 @@ Route::controller(PortfolioController::class)->group(function () {
 
 // Routes for all Blog Category Methods
 Route::controller(BlogCategoryController::class)->group(function () {
-    Route::get("blog/category/all", "BlogCategoryAll")->name(
+    Route::get("/blog/category/all", "BlogCategoryAll")->name(
         "all.blog.category"
     );
-    Route::get("blog/category/add", "AddBlogCategory")->name(
+    Route::get("/blog/category/add", "AddBlogCategory")->name(
         "add.blog.category"
     );
+    Route::get("/blog/category/edit/{id}", "EditBlogCategory")->name(
+        "edit.blog.category"
+    );
+    Route::get("/blog/category/delete/{id}", "DeleteBlogCategory")->name(
+        "delete.blog.category"
+    );
 
+    // All POST Methods
     Route::post("/store/blog-category", "StoreBlogCategory")->name(
         "store.blog.category"
+    );
+    Route::post("/blog/category/update/{id}", "UpdateBlogCategory")->name(
+        "update.blog.category"
     );
 });
 

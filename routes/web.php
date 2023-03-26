@@ -114,6 +114,9 @@ Route::controller(BlogCategoryController::class)->group(function () {
 Route::controller(BlogController::class)->group(function () {
     Route::get("/blogs/all", "AllBlog")->name("all.blog");
     Route::get("/blogs/add", "AddBlog")->name("add.blog");
+
+    // All POST Methods
+    Route::post("/store/blog", "StoreBlog")->name("store.blog");
 });
 
 // Dashboard Route

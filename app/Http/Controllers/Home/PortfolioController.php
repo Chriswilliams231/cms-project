@@ -140,4 +140,11 @@ class PortfolioController extends Controller
             ->back()
             ->with($notification);
     }
+
+    // Route Method to show all the data for the frontend
+    public function PortfolioDetails($id)
+    {
+        $portfolio = Portfolio::findOrFail($id);
+        return view("frontend.portfolio_details", compact("portfolio"));
+    }
 }

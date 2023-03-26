@@ -114,9 +114,12 @@ Route::controller(BlogCategoryController::class)->group(function () {
 Route::controller(BlogController::class)->group(function () {
     Route::get("/blogs/all", "AllBlog")->name("all.blog");
     Route::get("/blogs/add", "AddBlog")->name("add.blog");
+    Route::get("/blogs/edit/{id}", "EditBlog")->name("edit.blog");
+    Route::get("/delete/blog/{id}", "DeleteBlog")->name("delete.blog");
 
     // All POST Methods
     Route::post("/store/blog", "StoreBlog")->name("store.blog");
+    Route::post("/update/blog", "UpdateBlog")->name("update.blog");
 });
 
 // Dashboard Route

@@ -162,4 +162,11 @@ class BlogController extends Controller
             compact("blogpost", "allblogs", "categories", "categoryname")
         );
     }
+
+    public function HomeBlog()
+    {
+        $categories = BlogCategory::orderBy("blog_category", "ASC")->get();
+        $allblogs = Blog::latest()->get();
+        return view("frontend.blog", compact("allblogs", "categories"));
+    }
 }

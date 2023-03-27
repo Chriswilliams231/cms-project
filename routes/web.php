@@ -120,6 +120,9 @@ Route::controller(BlogController::class)->group(function () {
     // All POST Methods
     Route::post("/store/blog", "StoreBlog")->name("store.blog");
     Route::post("/update/blog", "UpdateBlog")->name("update.blog");
+
+    // Frontend Routes
+    Route::get("/blog/details/{id}", "BlogDetails")->name("blog.details");
 });
 
 // Dashboard Route

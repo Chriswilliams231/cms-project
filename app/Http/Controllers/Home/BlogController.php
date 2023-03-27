@@ -132,4 +132,18 @@ class BlogController extends Controller
             ->back()
             ->with($notification);
     }
+
+    // Frontend route to get all the blog details
+    public function BlogDetails($id)
+    {
+        $allblogs = Blog::latest()
+            ->limit(5)
+            ->get();
+        $blogs = Blog::findOrFail($id);
+        $categories = BlogCategory::orderBy("blog_category", "ASC")->get();
+        return view(
+            "frontend.blog_details",
+            compact("blogs", "allblogs", "categories")
+        );
+    }
 }

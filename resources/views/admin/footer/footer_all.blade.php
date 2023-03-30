@@ -61,7 +61,7 @@
                     <div class="row mb-3">
                         <label for="example-text-input" class="col-sm-2 col-form-label">Copyright</label>
                         <div class="col-sm-10">
-                            <input class="form-control" name="Copyright" type="text" value="{{$allfooter->copyright}}" id="example-text-input">
+                            <input class="form-control" name="copyright" type="text" value="{{$allfooter->copyright}}" id="example-text-input">
                         </div>
                     </div>
                     <!-- end row -->

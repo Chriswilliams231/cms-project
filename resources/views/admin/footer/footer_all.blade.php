@@ -11,7 +11,7 @@
                     <center>
                     <h4 class="card-title">Footer Edit Page</h4>
                     </center>
-                    <form method="post" action="{{route('update.about')}}">
+                    <form method="post" action="{{route('update.footer')}}">
 
                         @csrf
                         <input type="hidden" name="id" value="{{$allfooter->id}}">

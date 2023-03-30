@@ -131,6 +131,9 @@ Route::controller(BlogController::class)->group(function () {
 // Controller for All Footer Routes
 Route::controller(FooterController::class)->group(function () {
     Route::get("/footer/setup", "FooterSetup")->name("footer.setup");
+
+    // All POST Methods
+    Route::post("/footer/update", "UpdateFooter")->name("update.footer");
 });
 
 // Dashboard Route

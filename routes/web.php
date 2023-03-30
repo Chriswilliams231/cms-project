@@ -10,6 +10,7 @@ use App\Http\Controllers\Home\PortfolioController;
 use App\Http\Controllers\Home\BlogCategoryController;
 use App\Http\Controllers\Home\BlogController;
 use App\Http\Controllers\Home\FooterController;
+use App\Http\Controllers\Home\ContactController;
 
 /*
 |--------------------------------------------------------------------------
@@ -134,6 +135,10 @@ Route::controller(FooterController::class)->group(function () {
 
     // All POST Methods
     Route::post("/footer/update", "UpdateFooter")->name("update.footer");
+});
+// Controller for All Contact Routes
+Route::controller(ContactController::class)->group(function () {
+    Route::get("/contact", "Contact")->name("contact.me");
 });
 
 // Dashboard Route

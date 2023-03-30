@@ -9,7 +9,7 @@
             <div class="card">
                 <div class="card-body">
                     <center>
-                    <h4 class="card-title">About Page Edit Page</h4>
+                    <h4 class="card-title">About Edit Page</h4>
                     </center>
                     <form method="post" action="{{route('update.about')}}" enctype="multipart/form-data">
 

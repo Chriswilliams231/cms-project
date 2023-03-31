@@ -28,31 +28,43 @@ Route::get("/", function () {
 })->name("home");
 
 // Controller for all admin route methods
-Route::controller(AdminController::class)->group(function () {
-    Route::get("/admin/logout", "destroy")->name("admin.logout");
-    Route::get("/admin/profile", "profile")->name("admin.profile");
-    Route::get("/edit/profile", "edit")->name("edit.profile");
-    Route::get("/change/password", "ChangePassword")->name("change.password");
+Route::middleware(["auth"])->group(function () {
+    Route::controller(AdminController::class)->group(function () {
+        Route::get("/admin/logout", "destroy")->name("admin.logout");
+        Route::get("/admin/profile", "profile")->name("admin.profile");
+        Route::get("/edit/profile", "edit")->name("edit.profile");
+        Route::get("/change/password", "ChangePassword")->name(
+            "change.password"
+        );
 
-    // All POST Methods
-    Route::post("/store/profile", "StoreProfile")->name("store.profile");
-    Route::post("/update/password", "UpdatePassword")->name("update.password");
+        // All POST Methods
+        Route::post("/store/profile", "StoreProfile")->name("store.profile");
+        Route::post("/update/password", "UpdatePassword")->name(
+            "update.password"
+        );
+    });
 });
 
 // Controller for Home Slide Setup Routes
-Route::controller(HomeSliderController::class)->group(function () {
-    Route::get("/home/slide", "HomeSlider")->name("home.slide");
+Route::middleware(["auth"])->group(function () {
+    Route::controller(HomeSliderController::class)->group(function () {
+        Route::get("/home/slide", "HomeSlider")->name("home.slide");
 
-    // All POST Methods
-    Route::post("/update/slide", "UpdateSlider")->name("update.slider");
+        // All POST Methods
+        Route::post("/update/slide", "UpdateSlider")->name("update.slider");
+    });
 });
 
 // Controller For the About Page Setup Routes
 Route::controller(AboutController::class)->group(function () {
-    Route::get("/about/page", "AboutPage")->name("about.page");
+    Route::get("/about/page", "AboutPage")
+        ->middleware("auth")
+        ->name("about.page");
     Route::get("/about", "HomeAbout")->name("home.about");
     // Multi Image Route
-    Route::get("/about/multi-image", "MultiImage")->name("multi.image");
+    Route::get("/about/multi-image", "MultiImage")
+        ->middleware("auth")
+        ->name("multi.image");
     Route::get("/all/multi-image", "AllMultiImage")->name("all.multi.image");
     Route::get("/edit/multi-image/{id}", "EditMultiImage")->name(
         "edit.multi.image"

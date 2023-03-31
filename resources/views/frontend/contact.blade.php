@@ -63,7 +63,7 @@
                             </div>
                         </div>
                         <textarea name="message" id="message" placeholder="Enter your massage*"></textarea>
-                        <button type="submit" class="btn">send massage</button>
+                        <button type="submit" class="btn">send message</button>
                     </form>
                 </div>
             </div>

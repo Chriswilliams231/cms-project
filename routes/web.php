@@ -139,6 +139,8 @@ Route::controller(FooterController::class)->group(function () {
 // Controller for All Contact Routes
 Route::controller(ContactController::class)->group(function () {
     Route::get("/contact", "Contact")->name("contact.me");
+    Route::get("/contact/message", "ContactMessage")->name("contact.message");
+    Route::get("/contact/delete/{id}", "DeleteContact")->name("delete.contact");
 
     // All POST Methods
     Route::post("/store/message", "StoreMessage")->name("store.message");

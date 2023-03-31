@@ -50,7 +50,7 @@
                     </div>
                     <div class="col-lg-6 col-md-10">
                         <div class="portfolio__inner__content">
-                            <h2 class="title"><a href="portfolio-details.html">{{$item->portfolio_title}}</a></h2>
+                            <h2 class="title"><a href="{{route('portfolio.details',$item->id)}}">{{$item->portfolio_title}}</a></h2>
                             <p>{!! Str::limit($item->portfolio_description, 200) !!}</p>
                             
                             <a href="{{route('portfolio.details',$item->id)}}" class="link">View Case Study</a>

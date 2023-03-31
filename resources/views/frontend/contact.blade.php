@@ -44,19 +44,22 @@
             <!-- contact-area -->
             <div class="contact-area">
                 <div class="container">
-                    <form action="#" class="contact__form">
+                    <form method="post" action="{{route('store.message')}}" class="contact__form">
+
+                        @csrf
+
                         <div class="row">
                             <div class="col-md-6">
-                                <input type="text" placeholder="Enter your name*">
+                                <input name="name" type="text" placeholder="Enter your name*">
                             </div>
                             <div class="col-md-6">
-                                <input type="email" placeholder="Enter your mail*">
+                                <input name="email" type="email" placeholder="Enter your mail*">
                             </div>
                             <div class="col-md-6">
-                                <input type="text" placeholder="Enter your subject*">
+                                <input name="subject" type="text" placeholder="Enter your subject*">
                             </div>
                             <div class="col-md-6">
-                                <input type="text" placeholder="Your Budget*">
+                                <input name="phone" type="text" placeholder="Phone Number*">
                             </div>
                         </div>
                         <textarea name="message" id="message" placeholder="Enter your massage*"></textarea>

@@ -1,6 +1,9 @@
 @extends('frontend.main_master')
 @section('main')
 
+@section('title')
+ Home Portfolio Page
+@endsection
 
 <!-- banner-area -->
 @include('frontend.home_all.home_slide')

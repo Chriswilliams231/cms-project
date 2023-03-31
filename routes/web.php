@@ -22,10 +22,10 @@ use App\Http\Controllers\Home\ContactController;
 | be assigned to the "web" middleware group. Make something great!
 |
 */
-
+// Home Page for the frontend
 Route::get("/", function () {
     return view("frontend.index");
-});
+})->name("home");
 
 // Controller for all admin route methods
 Route::controller(AdminController::class)->group(function () {

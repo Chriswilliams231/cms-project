@@ -11,6 +11,7 @@ use App\Http\Controllers\Home\BlogCategoryController;
 use App\Http\Controllers\Home\BlogController;
 use App\Http\Controllers\Home\FooterController;
 use App\Http\Controllers\Home\ContactController;
+use Illuminate\Routing\Controllers\Middleware;
 
 /*
 |--------------------------------------------------------------------------
@@ -60,15 +61,21 @@ Route::controller(AboutController::class)->group(function () {
     Route::get("/about/page", "AboutPage")
         ->middleware("auth")
         ->name("about.page");
+
     Route::get("/about", "HomeAbout")->name("home.about");
     // Multi Image Route
     Route::get("/about/multi-image", "MultiImage")
         ->middleware("auth")
         ->name("multi.image");
-    Route::get("/all/multi-image", "AllMultiImage")->name("all.multi.image");
-    Route::get("/edit/multi-image/{id}", "EditMultiImage")->name(
-        "edit.multi.image"
-    );
+
+    Route::get("/all/multi-image", "AllMultiImage")
+        ->middleware("auth")
+        ->name("all.multi.image");
+
+    Route::get("/edit/multi-image/{id}", "EditMultiImage")
+        ->middleware("auth")
+        ->name("edit.multi.image");
+
     Route::get("/delete/multi-image/{id}", "DeleteMultiImage")->name(
         "delete.multi.image"
     );
@@ -83,9 +90,18 @@ Route::controller(AboutController::class)->group(function () {
 
 // Route for all Portfolio Methods
 Route::controller(PortfolioController::class)->group(function () {
-    Route::get("/portfolio/all", "PortfolioPage")->name("portfolio.page");
-    Route::get("/portfolio/add", "AddPortfolio")->name("add.portfolio");
-    Route::get("/portfolio/edit/{id}", "EditPortfolio")->name("edit.portfolio");
+    Route::get("/portfolio/all", "PortfolioPage")
+        ->middleware("auth")
+        ->name("portfolio.page");
+
+    Route::get("/portfolio/add", "AddPortfolio")
+        ->middleware("auth")
+        ->name("add.portfolio");
+
+    Route::get("/portfolio/edit/{id}", "EditPortfolio")
+        ->middleware("auth")
+        ->name("edit.portfolio");
+
     Route::get("/portfolio/delete/{id}", "DeletePortfolio")->name(
         "delete.portfolio"
     );
@@ -103,15 +119,18 @@ Route::controller(PortfolioController::class)->group(function () {
 
 // Routes for all Blog Category Methods
 Route::controller(BlogCategoryController::class)->group(function () {
-    Route::get("/blog/category/all", "BlogCategoryAll")->name(
-        "all.blog.category"
-    );
-    Route::get("/blog/category/add", "AddBlogCategory")->name(
-        "add.blog.category"
-    );
-    Route::get("/blog/category/edit/{id}", "EditBlogCategory")->name(
-        "edit.blog.category"
-    );
+    Route::get("/blog/category/all", "BlogCategoryAll")
+        ->middleware("auth")
+        ->name("all.blog.category");
+
+    Route::get("/blog/category/add", "AddBlogCategory")
+        ->middleware("auth")
+        ->name("add.blog.category");
+
+    Route::get("/blog/category/edit/{id}", "EditBlogCategory")
+        ->middleware("auth")
+        ->name("edit.blog.category");
+
     Route::get("/blog/category/delete/{id}", "DeleteBlogCategory")->name(
         "delete.blog.category"
     );
@@ -127,9 +146,18 @@ Route::controller(BlogCategoryController::class)->group(function () {
 
 // Controller for Blog Routes
 Route::controller(BlogController::class)->group(function () {
-    Route::get("/blogs/all", "AllBlog")->name("all.blog");
-    Route::get("/blogs/add", "AddBlog")->name("add.blog");
-    Route::get("/blogs/edit/{id}", "EditBlog")->name("edit.blog");
+    Route::get("/blogs/all", "AllBlog")
+        ->middleware("auth")
+        ->name("all.blog");
+
+    Route::get("/blogs/add", "AddBlog")
+        ->middleware("auth")
+        ->name("add.blog");
+
+    Route::get("/blogs/edit/{id}", "EditBlog")
+        ->middleware("auth")
+        ->name("edit.blog");
+
     Route::get("/delete/blog/{id}", "DeleteBlog")->name("delete.blog");
 
     // All POST Methods
@@ -143,16 +171,22 @@ Route::controller(BlogController::class)->group(function () {
 });
 
 // Controller for All Footer Routes
-Route::controller(FooterController::class)->group(function () {
-    Route::get("/footer/setup", "FooterSetup")->name("footer.setup");
+Route::middleware(["auth"])->group(function () {
+    Route::controller(FooterController::class)->group(function () {
+        Route::get("/footer/setup", "FooterSetup")->name("footer.setup");
 
-    // All POST Methods
-    Route::post("/footer/update", "UpdateFooter")->name("update.footer");
+        // All POST Methods
+        Route::post("/footer/update", "UpdateFooter")->name("update.footer");
+    });
 });
+
 // Controller for All Contact Routes
 Route::controller(ContactController::class)->group(function () {
     Route::get("/contact", "Contact")->name("contact.me");
-    Route::get("/contact/message", "ContactMessage")->name("contact.message");
+    Route::get("/contact/message", "ContactMessage")
+        ->middleware("auth")
+        ->name("contact.message");
+
     Route::get("/contact/delete/{id}", "DeleteContact")->name("delete.contact");
 
     // All POST Methods

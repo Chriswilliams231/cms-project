@@ -34,10 +34,10 @@
 
 
                             <tbody>
-                                @php($i = 1)
-                                @foreach($allMultiImage as $item)
+                                
+                                @foreach($allMultiImage as $key => $item)
                             <tr>
-                                <td>{{$i++}}</td>
+                                <td>{{$key+1}}</td>
                                 <td><img src="{{asset($item->multi_image)}}" style="width: 60px; height: 60px;" ></td>
                                 <td>
                                     <a href="{{route('edit.multi.image', $item->id)}}" class="btn btn-info sm" title="Edit Data"> <i class="fas fa-edit"></i> </a>

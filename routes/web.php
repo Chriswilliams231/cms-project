@@ -11,7 +11,6 @@ use App\Http\Controllers\Home\BlogCategoryController;
 use App\Http\Controllers\Home\BlogController;
 use App\Http\Controllers\Home\FooterController;
 use App\Http\Controllers\Home\ContactController;
-use Illuminate\Routing\Controllers\Middleware;
 
 /*
 |--------------------------------------------------------------------------

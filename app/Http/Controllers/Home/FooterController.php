@@ -9,12 +9,14 @@ use Illuminate\Http\RedirectResponse;
 
 class FooterController extends Controller
 {
+    // Mehtod to Route you to the Footer page
     public function FooterSetup()
     {
         $allfooter = Footer::find(1);
         return view("admin.footer.footer_all", compact("allfooter"));
     }
 
+    // Method that updates the footer table with the requested params
     public function UpdateFooter(Request $request): RedirectResponse
     {
         $footer_id = $request->id;

@@ -63,7 +63,7 @@ Route::controller(AboutController::class)->group(function () {
         ->name("about.page");
 
     Route::get("/about", "HomeAbout")->name("home.about");
-    // Multi Image Route
+    // Multi Image Routes
     Route::get("/about/multi-image", "MultiImage")
         ->middleware("auth")
         ->name("multi.image");

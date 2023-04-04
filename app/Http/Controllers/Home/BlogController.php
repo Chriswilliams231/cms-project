@@ -147,6 +147,11 @@ class BlogController extends Controller
         );
     }
 
+    /*
+     * Method that uses both the Blog and BlogCategory
+     * and finds the $id of the specific data selected
+     * on the frontend.
+     */
     public function CategoryBlog($id)
     {
         $blogpost = Blog::where("blog_category_id", $id)
@@ -163,6 +168,7 @@ class BlogController extends Controller
         );
     }
 
+    // Method that list all the blogs within the frontends blog page
     public function HomeBlog()
     {
         $categories = BlogCategory::orderBy("blog_category", "ASC")->get();

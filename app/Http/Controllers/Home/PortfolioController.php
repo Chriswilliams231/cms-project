@@ -103,7 +103,7 @@ class PortfolioController extends Controller
             ];
 
             return redirect()
-                ->route("all.portfolio")
+                ->back()
                 ->with($notification);
         } else {
             Portfolio::findOrFail($portfolio_id)->update([

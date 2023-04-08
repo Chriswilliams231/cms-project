@@ -229,6 +229,7 @@
                         @foreach($categories as $category)
                             <li class="sidebar__cat__item"><a href="{{ route('category.blog',$category->id) }}">{{ $category->blog_category  }}</a></li>
                         @endforeach
+                        
                         </ul>
                     </div>
                     <div class="widget">

@@ -46,8 +46,8 @@
             @foreach($allblogs as $blog)
                 <div class="standard__blog__post">
                     <div class="standard__blog__thumb">
-                        <a href="blog-details.html"><img src="{{ asset($blog->blog_image) }}" alt=""></a>
-                        <a href="blog-details.html" class="blog__link"><i class="far fa-long-arrow-right"></i></a>
+                        <a href="{{ route('blog.details',$blog->id) }}"><img src="{{ asset($blog->blog_image) }}" alt=""></a>
+                        <a href="{{ route('blog.details',$blog->id) }}" class="blog__link"><i class="far fa-long-arrow-right"></i></a>
                     </div>
                     <div class="standard__blog__content">
                         <div class="blog__post__avatar">
@@ -90,7 +90,7 @@
                            
                              <li class="rc__post__item">
                                 <div class="rc__post__thumb">
-                                    <a href="blog-details.html"><img src="{{ asset($all->blog_image) }} " alt=""></a>
+                                    <a href="{{ route('blog.details',$blog->id) }}"><img src="{{ asset($all->blog_image) }} " alt=""></a>
                                 </div>
                                 <div class="rc__post__content">
                                     <h5 class="title"><a href="blog-details.html">{{ $all->blog_title }} </a></h5>
@@ -133,17 +133,17 @@
                     <div class="widget">
                         <h4 class="widget-title">Popular Tags</h4>
                         <ul class="sidebar__tags">
-                            <li><a href="blog.html">Business</a></li>
-                            <li><a href="blog.html">Design</a></li>
-                            <li><a href="blog.html">apps</a></li>
-                            <li><a href="blog.html">landing page</a></li>
-                            <li><a href="blog.html">data</a></li>
-                            <li><a href="blog.html">website</a></li>
-                            <li><a href="blog.html">book</a></li>
-                            <li><a href="blog.html">Design</a></li>
-                            <li><a href="blog.html">product design</a></li>
-                            <li><a href="blog.html">landing page</a></li>
-                            <li><a href="blog.html">data</a></li>
+                            <li><a href="{{route('home.blog')}}">Business</a></li>
+                            <li><a href="{{route('home.blog')}}">Design</a></li>
+                            <li><a href="{{route('home.blog')}}">apps</a></li>
+                            <li><a href="{{route('home.blog')}}">landing page</a></li>
+                            <li><a href="{{route('home.blog')}}">data</a></li>
+                            <li><a href="{{route('home.blog')}}">website</a></li>
+                            <li><a href="{{route('home.blog')}}">book</a></li>
+                            <li><a href="{{route('home.blog')}}">Design</a></li>
+                            <li><a href="{{route('home.blog')}}">product design</a></li>
+                            <li><a href="{{route('home.blog')}}">landing page</a></li>
+                            <li><a href="{{route('home.blog')}}">data</a></li>
                         </ul>
                     </div>
                 </aside>

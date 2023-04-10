@@ -14,13 +14,13 @@
 <!-- about-area-end -->
 
     <!-- services-area -->
-    <section class="services">
+    <!-- <section class="services">
         <div class="container">
             <div class="services__title__wrap">
                 <div class="row align-items-center justify-content-between">
                     <div class="col-xl-5 col-lg-6 col-md-8">
                         <div class="section__title">
-                            <span class="sub-title">02 - my Services</span>
+                            <span class="sub-title"> - my Services</span>
                             <h2 class="title">Creates amazing digital experiences</h2>
                         </div>
                     </div>
@@ -142,7 +142,7 @@
                 </div>
             </div>
         </div>
-    </section>
+    </section> -->
     <!-- services-area-end -->
 
     <!-- work-process-area -->
@@ -151,7 +151,7 @@
             <div class="row justify-content-center">
                 <div class="col-xl-6 col-lg-8">
                     <div class="section__title text-center">
-                        <span class="sub-title">03 - Working Process</span>
+                        <span class="sub-title"> - Working Process</span>
                         <h2 class="title">A clear product design process is the basis of success</h2>
                     </div>
                 </div>
@@ -253,11 +253,11 @@
                 <div class="col-lg-6">
                     <div class="partner__content">
                         <div class="section__title">
-                            <span class="sub-title">05 - partners</span>
+                            <span class="sub-title"> - partners</span>
                             <h2 class="title">I proud to have collaborated with some awesome companies</h2>
                         </div>
                         <p>I'm a bit of a digital product junky. Over the years, I've used hundreds of web and mobile apps in different industries and verticals. Eventually, I decided that it would be a fun challenge to try designing and building my own.</p>
-                        <a href="contact.html" class="btn">Start a conversation</a>
+                        <a href="{{route('contact.me')}}" class="btn">Start a conversation</a>
                     </div>
                 </div>
             </div>
@@ -271,19 +271,19 @@
             <div class="row align-items-center justify-content-between">
                 <div class="col-lg-6 order-0 order-lg-2">
                     <ul class="testimonial__avatar__img">
-                        <li><img src="{{asset('frontend/assets/img/images/testi_img01.png')}}" alt=""></li>
-                        <li><img src="{{asset('frontend/assets/img/images/testi_img02.png')}}" alt=""></li>
-                        <li><img src="{{asset('frontend/assets/img/images/testi_img03.png')}}" alt=""></li>
-                        <li><img src="{{asset('frontend/assets/img/images/testi_img04.png')}}" alt=""></li>
-                        <li><img src="{{asset('frontend/assets/img/images/testi_img05.png')}}" alt=""></li>
-                        <li><img src="{{asset('frontend/assets/img/images/testi_img06.png')}}" alt=""></li>
-                        <li><img src="{{asset('frontend/assets/img/images/testi_img07.png')}}" alt=""></li>
+                        <li><img src="{{asset('frontend/assets/img/images/testi_avatar02.png')}}" alt=""></li>
+                        <li><img src="{{asset('frontend/assets/img/images/testi_avatar02.png')}}" alt=""></li>
+                        <li><img src="{{asset('frontend/assets/img/images/testi_avatar02.png')}}" alt=""></li>
+                        <li><img src="{{asset('frontend/assets/img/images/testi_avatar02.png')}}" alt=""></li>
+                        <li><img src="{{asset('frontend/assets/img/images/testi_avatar01.png')}}" alt=""></li>
+                        <li><img src="{{asset('frontend/assets/img/images/testi_avatar01.png')}}" alt=""></li>
+                        <li><img src="{{asset('frontend/assets/img/images/testi_avatar01.png')}}" alt=""></li>
                     </ul>
                 </div>
                 <div class="col-xl-5 col-lg-6">
                     <div class="testimonial__wrap">
                         <div class="section__title">
-                            <span class="sub-title">06 - Client Feedback</span>
+                            <span class="sub-title"> - Client Feedback</span>
                             <h2 class="title">Happy clients feedback</h2>
                         </div>
                         <div class="testimonial__active">
@@ -329,7 +329,7 @@
                 <div class="row">
                     <div class="col-lg-6">
                         <div class="section__title">
-                            <span class="sub-title">07 - Say hello</span>
+                            <span class="sub-title"> - Say hello</span>
                             <h2 class="title">Any questions? Feel free <br> to contact</h2>
                         </div>
                         <div class="homeContact__content">

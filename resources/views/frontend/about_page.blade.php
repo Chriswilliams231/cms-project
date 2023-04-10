@@ -50,7 +50,7 @@
             <div class="col-lg-6">
                 <div class="about__content">
                     <div class="section__title">
-                        <span class="sub-title">01 - About me</span>
+                        <span class="sub-title"> - About me</span>
                         <h2 class="title">{{$aboutpage->title}} </h2>
                     </div>
                     <div class="about__exp">
@@ -257,7 +257,7 @@
 <!-- about-area-end -->
 
 <!-- services-area -->
-<section class="services__style__two">
+<!-- <section class="services__style__two">
     <div class="container">
         <div class="row justify-content-center">
             <div class="col-lg-6 col-md-8">
@@ -368,7 +368,7 @@
             </div>
         </div>
     </div>
-</section>
+</section> -->
 <!-- services-area-end -->
 
 <!-- testimonial-area -->
@@ -378,7 +378,7 @@
             <div class="col-xl-9 col-lg-11">
                 <div class="testimonial__wrap">
                     <div class="section__title text-center">
-                        <span class="sub-title">06 - Client Feedback</span>
+                        <span class="sub-title"> - Client Feedback</span>
                         <h2 class="title">Some happy clients feedback</h2>
                     </div>
                     <div class="testimonial__two__active">

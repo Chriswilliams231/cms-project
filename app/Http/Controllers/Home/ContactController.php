@@ -26,6 +26,7 @@ class ContactController extends Controller
             "message" => $request->message,
             "created_at" => Carbon::now(),
         ]);
+
         $notification = [
             "message" => "Your message has been sent!",
             "alert-type" => "success",

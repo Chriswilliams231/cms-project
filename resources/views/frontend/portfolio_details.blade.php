@@ -45,16 +45,17 @@
                     <h2 class="title">{{$portfolio->portfolio_title}}</h2>
                    
                    <p>{!!$portfolio->portfolio_description!!}</p>
-                   
+                
                 </div>
             </div>
             <div class="col-lg-4">
                 <aside class="services__sidebar">
                     <div class="widget">
                         <h5 class="title">Get in Touch</h5>
-                        <form action="#" class="sidebar__contact">
-                            <input type="text" placeholder="Enter name*">
-                            <input type="email" placeholder="Enter your mail*">
+                        <form method="post" action="{{route('store.message')}" class="sidebar__contact">
+                        @csrf
+                            <input name="name" type="text" placeholder="Enter name*">
+                            <input  name="email" type="email" placeholder="Enter your mail*">
                             <textarea name="message" id="message" placeholder="Massage*"></textarea>
                             <button type="submit" class="btn">send massage</button>
                         </form>
@@ -104,7 +105,7 @@
             <div class="row">
                 <div class="col-lg-6">
                     <div class="section__title">
-                        <span class="sub-title">07 - Say hello</span>
+                        <span class="sub-title"> - Say hello</span>
                         <h2 class="title">Any questions? Feel free <br> to contact</h2>
                     </div>
                     <div class="homeContact__content">

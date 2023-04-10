@@ -4,6 +4,7 @@ namespace App\Http\Controllers\Home;
 
 use App\Http\Controllers\Controller;
 use App\Models\Portfolio;
+use App\Models\Contact;
 
 use Intervention\Image\Facades\Image;
 use Illuminate\Http\Request;

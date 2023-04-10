@@ -69,37 +69,7 @@
                             </li>
                         </ul>
                     </div>
-                    <div class="blog__next__prev">
-                        <div class="row justify-content-between">
-                            <div class="col-xl-5 col-md-6">
-                                <div class="blog__next__prev__item">
-                                    <h4 class="title">Previous Post</h4>
-                                    <div class="blog__next__prev__post">
-                                        <div class="blog__next__prev__thumb">
-                                            <a href="blog-details.html"><img src="assets/img/blog/blog_prev.jpg" alt=""></a>
-                                        </div>
-                                        <div class="blog__next__prev__content">
-                                            <h5 class="title"><a href="blog-details.html">Digital Marketing Agency Pricing Guide.</a></h5>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-xl-5 col-md-6">
-                                <div class="blog__next__prev__item next_post text-end">
-                                    <h4 class="title">Next Post</h4>
-                                    <div class="blog__next__prev__post">
-                                        <div class="blog__next__prev__thumb">
-                                            <a href="blog-details.html"><img src="assets/img/blog/blog_next.jpg" alt=""></a>
-                                        </div>
-                                        <div class="blog__next__prev__content">
-                                            <h5 class="title"><a href="blog-details.html">App Prototyping
-                                            Types, Example & Usages.</a></h5>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+                    
                     <div class="comment comment__wrap">
                         <div class="comment__title">
                             <h4 class="title">(04) Comment</h4>
@@ -167,7 +137,7 @@
                             </li>
                         </ul>
                     </div>
-                    <div class="comment__form">
+                    <!-- <div class="comment__form">
                         <div class="comment__title">
                             <h4 class="title">Write your comment</h4>
                         </div>
@@ -193,7 +163,7 @@
                             </div>
                             <button type="submit" class="btn">post a comment</button>
                         </form>
-                    </div>
+                    </div> -->
                 </div>
             </div>
             <div class="col-lg-4">
@@ -284,7 +254,7 @@
             <div class="row">
                 <div class="col-lg-6">
                     <div class="section__title">
-                        <span class="sub-title">07 - Say hello</span>
+                        <span class="sub-title"> - Say hello</span>
                         <h2 class="title">Any questions? Feel free <br> to contact</h2>
                     </div>
                     <div class="homeContact__content">

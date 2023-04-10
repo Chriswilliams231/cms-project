@@ -154,4 +154,25 @@ class PortfolioController extends Controller
         $portfolio = Portfolio::latest()->get();
         return view("frontend.portfolio", compact("portfolio"));
     }
+
+    public function PortfolioMessage(Request $request): RedirectResponse
+    {
+        Contact::insert([
+            "name" => $request->name,
+            "email" => $request->email,
+            "subject" => $request->subject,
+            "phone" => $request->phone,
+            "message" => $request->message,
+            "created_at" => Carbon::now(),
+        ]);
+
+        $notification = [
+            "message" => "Your message has been sent!",
+            "alert-type" => "success",
+        ];
+
+        return redirect()
+            ->back()
+            ->with($notification);
+    }
 }

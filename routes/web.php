@@ -111,6 +111,9 @@ Route::controller(PortfolioController::class)->group(function () {
 
     // All POST Methods
     Route::post("/portfolio/store", "StorePortfolio")->name("store.portfolio");
+    Route::post("/portfolio/store-message", "PortfolioMessage")->name(
+        "portfolio.message"
+    );
     Route::post("/portfolio/update", "UpdatePortfolio")->name(
         "update.portfolio"
     );

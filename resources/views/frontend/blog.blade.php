@@ -90,10 +90,10 @@
                            
                              <li class="rc__post__item">
                                 <div class="rc__post__thumb">
-                                    <a href="{{ route('blog.details',$blog->id) }}"><img src="{{ asset($all->blog_image) }} " alt=""></a>
+                                    <a href="{{ route('blog.details',$all->id) }}"><img src="{{ asset($all->blog_image) }} " alt=""></a>
                                 </div>
                                 <div class="rc__post__content">
-                                    <h5 class="title"><a href="blog-details.html">{{ $all->blog_title }} </a></h5>
+                                    <h5 class="title"><a href="{{route('blog.details',$all->id)}}">{{ $all->blog_title }} </a></h5>
                                     <span class="post-date"><i class="fal fa-calendar-alt"></i> {{ Carbon\Carbon::parse($all->created_at)->diffForHumans() }} </span>
                                 </div>
                             </li>
@@ -161,7 +161,7 @@
             <div class="row">
                 <div class="col-lg-6">
                     <div class="section__title">
-                        <span class="sub-title">07 - Say hello</span>
+                        <span class="sub-title"> - Say hello</span>
                         <h2 class="title">Any questions? Feel free <br> to contact</h2>
                     </div>
                     <div class="homeContact__content">

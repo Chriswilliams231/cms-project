@@ -56,7 +56,7 @@
                             <h2 class="title"><a href="{{route('portfolio.details',$item->id)}}">{{$item->portfolio_title}}</a></h2>
                             <p>{!! Str::limit($item->portfolio_description, 200) !!}</p>
                             
-                            <a href="{{route('portfolio.details',$item->id)}}" class="link">View Case Study</a>
+                            <a href="{{route('portfolio.details',$item->id)}}" class="link">View Details</a>
                         </div>
                     </div>
                 </div>
@@ -77,7 +77,7 @@
             <div class="row">
                 <div class="col-lg-6">
                     <div class="section__title">
-                        <span class="sub-title">07 - Say hello</span>
+                        <span class="sub-title"> - Say hello</span>
                         <h2 class="title">Any questions? Feel free <br> to contact</h2>
                     </div>
                     <div class="homeContact__content">

@@ -17,7 +17,7 @@
                     <h2 class="title">About me</h2>
                     <nav aria-label="breadcrumb">
                         <ol class="breadcrumb">
-                            <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+                            <li class="breadcrumb-item"><a href="{{route('home')}}">Home</a></li>
                             <li class="breadcrumb-item active" aria-current="page">About Me</li>
                         </ol>
                     </nav>
@@ -62,7 +62,7 @@
                         </div>
                     </div>
                     <p class="desc">{{$aboutpage->short_description}} </p>
-                    <a href="about.html" class="btn">Download my resume</a>
+                    <a href="#" class="btn">Download my resume</a>
                 </div>
             </div>
         </div>

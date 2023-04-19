@@ -16,8 +16,9 @@
                     <h2 class="title">{{$categoryname->blog_category}} </h2>
                     <nav aria-label="breadcrumb">
                         <ol class="breadcrumb">
-                            <li class="breadcrumb-item"><a href="index.html">Home</a></li>
-                            <li class="breadcrumb-item active" aria-current="page">Blog</li>
+                            <li class="breadcrumb-item"><a href="{{route('home')}}">Home</a></li>
+                            <li class="breadcrumb-item"><a href="{{route('home.blog')}}">Blogs</a></li>
+                            <li class="breadcrumb-item active" aria-current="page">Blog Category</li>
                         </ol>
                     </nav>
                 </div>
@@ -68,7 +69,7 @@
                 <div class="pagination-wrap">
                     <nav aria-label="Page navigation example">
                         <ul class="pagination">
-                            <li class="page-item"><a class="page-link" href="#"><i class="far fa-long-arrow-left"></i></a></li>
+                            <li class="page-item"><a class="page-link" href="{{route('home.blog')}}"><i class="far fa-long-arrow-left"></i></a></li>
                            
                         </ul>
                     </nav>

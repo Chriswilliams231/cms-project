@@ -2,7 +2,7 @@
 @section('main')
 
 @section('title')
- Blog Page
+ All Blogs
 @endsection
 
 <main>

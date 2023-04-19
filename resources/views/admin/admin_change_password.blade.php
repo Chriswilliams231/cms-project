@@ -1,6 +1,10 @@
 @extends('admin.admin_master')
 @section('admin')
 
+@section('dashboard')
+ Dashboard | Change Password
+@endsection
+
 <div class="page-content">
     <div class="container-fluid">
      <div class="row">

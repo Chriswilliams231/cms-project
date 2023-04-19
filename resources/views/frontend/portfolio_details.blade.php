@@ -56,7 +56,7 @@
                 <aside class="services__sidebar">
                     <div class="widget">
                         <h5 class="title">Get in Touch</h5>
-                        <form method="post" action="" class="sidebar__contact">
+                        <form  action="#" class="sidebar__contact">
                         @csrf
                             <input name="name" type="text" placeholder="Enter name*">
                             <input  name="email" type="email" placeholder="Enter your mail*">

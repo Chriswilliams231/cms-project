@@ -1,5 +1,10 @@
 @extends('admin.admin_master')
 @section('admin')
+
+@section('dashboard')
+ Dashboard | Admin Profile 
+@endsection
+
 <div class="page-content">
     <div class="container-fluid">
 

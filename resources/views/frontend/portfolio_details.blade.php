@@ -1,6 +1,10 @@
 @extends('frontend.main_master')
 @section('main')
 
+@section('title')
+ Portfolio Details
+@endsection
+
 <main>
 
 <!-- breadcrumb-area -->
@@ -52,7 +56,7 @@
                 <aside class="services__sidebar">
                     <div class="widget">
                         <h5 class="title">Get in Touch</h5>
-                        <form method="post" action="{{route('portfolio.message')}" class="sidebar__contact">
+                        <form method="post" action="" class="sidebar__contact">
                         @csrf
                             <input name="name" type="text" placeholder="Enter name*">
                             <input  name="email" type="email" placeholder="Enter your mail*">
@@ -67,10 +71,10 @@
                             <li><span>Location :</span> East Meadow NY 11554</li>
                             <li><span>Client :</span> American</li>
                             <li class="cagegory"><span>Category :</span>
-                                <a href="portfolio.html">Photo,</a>
-                                <a href="portfolio.html">UI/UX</a>
+                                <a href="{{route('home.portfolio')}}">Photo,</a>
+                                <a href="{{route('home.portfolio')}}">UI/UX</a>
                             </li>
-                            <li><span>Project Link :</span> <a href="portfolio-details.html">https://www.yournews.com/</a></li>
+                            <li><span>Project Link :</span> <a href="#">https://www.yournews.com/</a></li>
                         </ul>
                     </div>
                     <div class="widget">

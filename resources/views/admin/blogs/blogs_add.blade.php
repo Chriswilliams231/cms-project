@@ -1,6 +1,11 @@
 
 @extends('admin.admin_master')
 @section('admin')
+
+@section('dashboard')
+ Dashboard | Add Blog 
+@endsection
+
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 
 <style type="text/css">
@@ -18,7 +23,7 @@
             <div class="card">
                 <div class="card-body">
                     <center>
-                    <h4 class="card-title">Portfolio Page</h4>
+                    <h4 class="card-title"> Add Blog Page</h4>
                     </center>
                     <form method="post" action="{{route('store.blog')}}" enctype="multipart/form-data">
 

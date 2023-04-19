@@ -6,7 +6,6 @@
 @endsection
 
 <main>
-
             <!-- breadcrumb-area -->
             <section class="breadcrumb__wrap">
                 <div class="container custom-container">

@@ -254,7 +254,7 @@
                     <div class="partner__content">
                         <div class="section__title">
                             <span class="sub-title"> - partners</span>
-                            <h2 class="title">I proud to have collaborated with some awesome companies</h2>
+                            <h2 class="title">I'm proud to have collaborated with some awesome companies</h2>
                         </div>
                         <p>I'm a bit of a digital product junky. Over the years, I've used hundreds of web and mobile apps in different industries and verticals. Eventually, I decided that it would be a fun challenge to try designing and building my own.</p>
                         <a href="{{route('contact.me')}}" class="btn">Start a conversation</a>

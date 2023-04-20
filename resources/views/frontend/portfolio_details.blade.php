@@ -61,7 +61,7 @@
                         @csrf
                             <input name="name" type="text" placeholder="Enter name*">
                             <input  name="email" type="email" placeholder="Enter your mail*">
-                            <textarea name="message" id="message" placeholder="Massage*"></textarea>
+                            <textarea name="message" id="message" placeholder="Message*"></textarea>
                             <button type="submit" class="btn">send massage</button>
                         </form>
                     </div>
@@ -124,7 +124,7 @@
                             <input type="text" placeholder="Enter name*">
                             <input type="email" placeholder="Enter mail*">
                             <input type="number" placeholder="Enter number*">
-                            <textarea name="message" placeholder="Enter Massage*"></textarea>
+                            <textarea name="message" placeholder="Enter Message*"></textarea>
                             <button type="submit">Send Message</button>
                         </form>
                     </div>

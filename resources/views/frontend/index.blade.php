@@ -272,12 +272,12 @@
                 <div class="col-lg-6 order-0 order-lg-2">
                     <ul class="testimonial__avatar__img">
                         <li><img src="{{asset('frontend/assets/img/images/testi_avatar02.png')}}" alt=""></li>
-                        <li><img src="{{asset('frontend/assets/img/images/testi_avatar02.png')}}" alt=""></li>
-                        <li><img src="{{asset('frontend/assets/img/images/testi_avatar02.png')}}" alt=""></li>
-                        <li><img src="{{asset('frontend/assets/img/images/testi_avatar02.png')}}" alt=""></li>
+                        <li><img src="{{asset('frontend/assets/img/icons/hotjar_light.png')}}" alt=""></li>
+                        <li><img src="{{asset('frontend/assets/img/icons/testi_shape06.png')}}" alt=""></li>
+                        <li><img src="{{asset('frontend/assets/img/icons/breadcrumb_icon03.png')}}" alt=""></li>
+                        <li><img src="{{asset('frontend/assets/img/icons/photoshop_light.png')}}" alt=""></li>
                         <li><img src="{{asset('frontend/assets/img/images/testi_avatar01.png')}}" alt=""></li>
-                        <li><img src="{{asset('frontend/assets/img/images/testi_avatar01.png')}}" alt=""></li>
-                        <li><img src="{{asset('frontend/assets/img/images/testi_avatar01.png')}}" alt=""></li>
+                        <li><img src="{{asset('frontend/assets/img/icons/breadcrumb_icon01.png')}}" alt=""></li>
                     </ul>
                 </div>
                 <div class="col-xl-5 col-lg-6">

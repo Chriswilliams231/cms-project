@@ -136,7 +136,7 @@
                                         <input type="text" placeholder="Enter name*">
                                         <input type="email" placeholder="Enter mail*">
                                         <input type="number" placeholder="Enter number*">
-                                        <textarea name="message" placeholder="Enter Massage*"></textarea>
+                                        <textarea name="message" placeholder="Enter message*"></textarea>
                                         <button type="submit">Send Message</button>
                                     </form>
                                 </div>

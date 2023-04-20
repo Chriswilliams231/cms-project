@@ -32,7 +32,7 @@ $allMultiImage = App\Models\MultiImage::all();
                         </div>
                     </div>
                     <p class="desc">{{$aboutpage->short_description}} </p>
-                    <a href="{{route('home.about')}}" class="btn">Download my resume</a>
+                    <a href="{{route('home.about')}}" class="btn">View More</a>
                 </div>
             </div>
         </div>

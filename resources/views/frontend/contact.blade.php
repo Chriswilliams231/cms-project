@@ -55,16 +55,16 @@
                                 <input name="name" type="text" placeholder="Enter your name*">
                             </div>
                             <div class="col-md-6">
-                                <input name="email" type="email" placeholder="Enter your mail*">
+                                <input name="email" type="email" placeholder="Enter your email*">
                             </div>
                             <div class="col-md-6">
                                 <input name="subject" type="text" placeholder="Enter your subject*">
                             </div>
                             <div class="col-md-6">
-                                <input name="phone" type="text" placeholder="Phone Number*">
+                                <input name="phone" type="text" placeholder="Phone number*">
                             </div>
                         </div>
-                        <textarea name="message" id="message" placeholder="Enter your massage*"></textarea>
+                        <textarea name="message" id="message" placeholder="Enter your message*"></textarea>
                         <button type="submit" class="btn">send message</button>
                     </form>
                 </div>

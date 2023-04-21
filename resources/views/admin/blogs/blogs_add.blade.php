@@ -23,7 +23,7 @@
             <div class="card">
                 <div class="card-body">
                     <center>
-                    <h4 class="card-title"> Add Blog Page</h4>
+                    <h4 class="card-title"> Add Blog Page</h4><br>
                     </center>
                     <form method="post" action="{{route('store.blog')}}" enctype="multipart/form-data">
 

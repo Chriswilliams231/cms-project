@@ -14,7 +14,7 @@
             <div class="card">
                 <div class="card-body">
                     <center>
-                    <h4 class="card-title">Footer Edit Page</h4>
+                    <h4 class="card-title">Footer Edit Page</h4><br>
                     </center>
                     <form method="post" action="{{route('update.footer')}}">
 

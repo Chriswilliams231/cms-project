@@ -23,7 +23,9 @@
     <div class="card">
         <div class="card-body">
 
-            <h4 class="card-title">Edit Blog Page </h4>
+            <center>
+                <h4 class="card-title">Edit Blog Page </h4><br>
+            </center>
 
             <form method="post" action="{{ route('update.blog') }}" enctype="multipart/form-data">
                 @csrf

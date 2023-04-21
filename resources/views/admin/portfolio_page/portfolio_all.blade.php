@@ -13,7 +13,7 @@
                 <div class="card">
                     <div class="card-body">
                         <center>
-                            <h4 class="card-title">All Portfolio Data</h4><br><br>
+                            <h4 class="card-title">All Portfolio Information</h4><br><br>
                          </center>
 
                         <table id="datatable" class="table table-bordered dt-responsive nowrap" style="border-collapse: collapse; border-spacing: 0; width: 100%;">

@@ -33,7 +33,7 @@
                 </a>
                 <ul class="sub-menu" aria-expanded="false">
                     <li><a href="{{route('about.page')}}">About Page</a></li>
-                    <li><a href="{{route('multi.image')}}">About Mutli Image</a></li>
+                    <li><a href="{{route('multi.image')}}">Add Mutli Images</a></li>
                     <li><a href="{{route('all.multi.image')}}">All Mutli Images</a></li>
                 </ul>
             </li>
@@ -43,7 +43,7 @@
                     <span>Portfolio Page Setup</span>
                 </a>
                 <ul class="sub-menu" aria-expanded="false">
-                    <li><a href="{{route('portfolio.page')}}">All Portfolio</a></li>
+                    <li><a href="{{route('portfolio.page')}}">All Portfolio Info</a></li>
                     <li><a href="{{route('add.portfolio')}}">Add to Portfolio</a></li>
                 </ul>
             </li>
@@ -57,7 +57,7 @@
                     <span>Blog Category</span>
                 </a>
                 <ul class="sub-menu" aria-expanded="false">
-                    <li><a href="{{route('all.blog.category')}}">All Blog Category</a></li>
+                    <li><a href="{{route('all.blog.category')}}">All Blog Categories</a></li>
                     <li><a href="{{route('add.blog.category')}}">Add Blog Category</a></li>
                 </ul>
             </li>

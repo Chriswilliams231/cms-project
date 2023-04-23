@@ -2,8 +2,6 @@
 
 use Illuminate\Support\Str;
 
-$DATABASE_URL = parse_url("CLEARDB_DATABASE_URL");
-
 return [
     /*
     |--------------------------------------------------------------------------
@@ -46,11 +44,11 @@ return [
         "mysql" => [
             "driver" => "mysql",
             "url" => env("DATABASE_URL"),
-            "host" => $DATABASE_URL["host"],
-            "port" => $DATABASE_URL["port"],
-            "database" => ltrim($DATABASE_URL["path"], "/"),
-            "username" => $DATABASE_URL["user"],
-            "password" => $DATABASE_URL["pass"],
+            "host" => env("DB_HOST", "db4free.net"),
+            "port" => env("DB_PORT", "3306"),
+            "database" => env("DB_DATABASE", "cmslaravel"),
+            "username" => env("DB_USERNAME", "cwill231"),
+            "password" => env("DB_PASSWORD", "Lgb-Sjc0214"),
             "unix_socket" => env("DB_SOCKET", ""),
             "charset" => "utf8mb4",
             "collation" => "utf8mb4_unicode_ci",

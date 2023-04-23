@@ -51,7 +51,7 @@ return [
             "password" => env("DB_PASSWORD", "Lgb-Sjc0214"),
             "unix_socket" => env("DB_SOCKET", ""),
             "charset" => "utf8",
-            "collation" => "utf8mb4_unicode_ci",
+            "collation" => "utf8_unicode_ci",
             "prefix" => "",
             "prefix_indexes" => true,
             "strict" => true,

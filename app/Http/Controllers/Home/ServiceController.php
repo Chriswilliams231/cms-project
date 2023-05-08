@@ -12,4 +12,9 @@ class ServiceController extends Controller
     {
         return view("admin.service_page.service_all");
     }
+
+    public function AddService()
+    {
+        return view("admin.service_page.service_add");
+    }
 }

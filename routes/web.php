@@ -197,6 +197,7 @@ Route::controller(ContactController::class)->group(function () {
 });
 Route::controller(ServiceController::class)->group(function () {
     Route::get("/service/all", "AllService")->name("service.all");
+    Route::get("/service/add", "AddService")->name("service.add");
 });
 
 // Dashboard Route

@@ -21,6 +21,7 @@ class BlogController extends Controller
     }
 
     // Method that links the BlogCategory data the add.blog route
+
     public function AddBlog()
     {
         $categories = BlogCategory::orderBy("blog_category", "ASC")->get();

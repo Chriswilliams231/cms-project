@@ -11,6 +11,7 @@ use App\Http\Controllers\Home\BlogCategoryController;
 use App\Http\Controllers\Home\BlogController;
 use App\Http\Controllers\Home\FooterController;
 use App\Http\Controllers\Home\ContactController;
+use App\Http\Controllers\Home\ServiceController;
 
 /*
 |--------------------------------------------------------------------------
@@ -193,6 +194,9 @@ Route::controller(ContactController::class)->group(function () {
 
     // All POST Methods
     Route::post("/store/message", "StoreMessage")->name("store.message");
+});
+Route::controller(ServiceController::class)->group(function () {
+    Route::get("/service/all", "AllService")->name("service.all");
 });
 
 // Dashboard Route

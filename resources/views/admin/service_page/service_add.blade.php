@@ -66,6 +66,9 @@
                         <label for="example-text-input" class="col-sm-2 col-form-label">Service Image</label>
                         <div class="col-sm-10">
                             <input class="form-control" name="service_image" type="file"  id="image">
+                            @error('service_image')
+                                <span class="text-danger">{{$message}}</span>
+                            @enderror
                         </div>
                     </div>
                     <!-- end row -->

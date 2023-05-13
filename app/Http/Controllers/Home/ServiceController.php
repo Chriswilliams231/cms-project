@@ -24,6 +24,19 @@ class ServiceController extends Controller
 
     public function StoreService(Request $request): RedirectResponse
     {
+        $request->validate(
+            [
+                "title" => "required",
+                "short_title" => "required",
+                "service_image" => "required",
+            ],
+            [
+                "title.required" => "Service Title is Required",
+                "short_title.required" => "Service Short Title is Required",
+                "service_image.required" => "Service Image is Required",
+            ]
+        );
+
         $image = $request->file("service_image");
         $name_gen =
             hexdec(uniqid()) . "." . $image->getClientOriginalExtension(); // 3434343443.jpg

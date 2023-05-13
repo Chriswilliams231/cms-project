@@ -195,9 +195,14 @@ Route::controller(ContactController::class)->group(function () {
     // All POST Methods
     Route::post("/store/message", "StoreMessage")->name("store.message");
 });
+
+// Controller for all Service routes
 Route::controller(ServiceController::class)->group(function () {
     Route::get("/service/all", "AllService")->name("service.all");
     Route::get("/service/add", "AddService")->name("service.add");
+
+    // All POST Methods
+    Route::post("/service/store", "StoreService")->name("store.service");
 });
 
 // Dashboard Route

@@ -17,12 +17,12 @@
                     <center>
                     <h4 class="card-title">Service Page</h4>
                     </center>
-                    <form method="post" action="{{route('store.portfolio')}}" enctype="multipart/form-data">
+                    <form method="post" action="{{route('store.service')}}" enctype="multipart/form-data">
 
                         @csrf
                         
                     <div class="row mb-3">
-                        <label for="example-text-input" class="col-sm-2 col-form-label">Service Name</label>
+                        <label for="example-text-input" class="col-sm-2 col-form-label">Service Title</label>
                         <div class="col-sm-10">
                             <input class="form-control" name="title" type="text"  id="name">
                             @error('title')
@@ -32,7 +32,7 @@
                     </div>
                     <!-- end row -->
                     <div class="row mb-3">
-                        <label for="example-text-input" class="col-sm-2 col-form-label">Long Service Title</label>
+                        <label for="example-text-input" class="col-sm-2 col-form-label">Short Title</label>
                         <div class="col-sm-10">
                             <input class="form-control" name="short_title" type="text"  id="short_title">
                             @error('short_title')
